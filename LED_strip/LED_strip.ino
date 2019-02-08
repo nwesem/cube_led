@@ -44,7 +44,7 @@ void setup() {
 // Runs 10 LEDs at a time along strip, cycling through red, green and blue.
 // This requires about 200 mA for all the 'on' pixels + 1 mA per 'off' pixel.
 const int
-  numLEDs = 50;                 // on-LED width
+  numLEDs = 30;                 // on-LED width
 
 int      head  = 0, tail = - numLEDs; // Index of first 'on' and 'off' pixels
 uint32_t color = 0xFF0000;      // 'On' color (starts red)
@@ -56,7 +56,11 @@ bool goingUp = true;
 
 
 void loop() {
- 
+ tempo = analogRead(0);
+// tempo = map(tempo, 0, 705, 0, 100);
+// Serial.println(tempo);
+// delay(500);
+// tempo = ;
  up_down(tempo);
 // up_down_bounce(tempo);
   
